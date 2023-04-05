@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -22,6 +23,12 @@
                         <tr><th>Email</th><th>:</th><td>{{$user->email}}</td></tr>
                         <tr><th>Created At</th><th>:</th><td>{{$user->created_at}}</td></tr>
                     </table>
+
+                    <div class="col-md-12 text-center">
+                    <a href="">
+                    <a class="btn btn-success mt3" href="{{ route('index3') }}">Menuju data pegawai</a>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>

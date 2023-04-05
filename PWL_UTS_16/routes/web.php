@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MahasiswaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/homeLogin', [App\Http\Controllers\HomeController::class, 'indexLogin'])->name('index3');
+Route::post('find', [MahasiswaController::class, 'find'])->name('find');
+Route::resource('penggajian', MahasiswaController::class);
