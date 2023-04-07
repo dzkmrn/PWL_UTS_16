@@ -13,6 +13,13 @@ class Mahasiswa extends Model
 
     public $timestamps = false;
     protected $primaryKey = 'NIP'; // Memanggil isi DB Dengan primarykey
+    protected $fillable = [
+        'NIP',
+        'Nama',
+        'Alamat',
+        'Jabatan',
+        'Gaji_pokok',
+    ];
     /**
      * The attributes that are mass assignable.
      *

@@ -37,7 +37,7 @@ class MahasiswaController extends Controller
         //fungsi eloquent untuk menambah data
         Mahasiswa::create($request->all());
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('mahasiswas.index')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect()->route('penggajians.index')->with('success', 'Data Berhasil Ditambahkan');
     }
     public function show($NIP)
     {
@@ -64,13 +64,13 @@ class MahasiswaController extends Controller
         //fungsi eloquent untuk mengupdate data inputan kita
         Mahasiswa::find($NIP)->update($request->all());
         //jika data berhasil diupdate, akan kembali ke halaman utama
-        return redirect()->route('mahasiswas.index')->with('success', 'Data Berhasil Diupdate');
+        return redirect()->route('penggajian.index')->with('success', 'Data Berhasil Diupdate');
     }
     public function destroy($NIP)
     {
         //fungsi eloquent untuk menghapus data
         Mahasiswa::find($NIP)->delete();
-        return redirect()->route('mahasiswas.index')->with('success', 'Data Berhasil Dihapus');
+        return redirect()->route('penggajian.index')->with('success', 'Data Berhasil Dihapus');
     }
 
     public function find(Request $request){
